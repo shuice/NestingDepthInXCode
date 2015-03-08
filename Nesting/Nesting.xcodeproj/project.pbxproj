@@ -1,0 +1,447 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4C64E9121AABF89900BBDB1B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C64E9111AABF89900BBDB1B /* AppDelegate.m */; };
+		4C64E9141AABF89A00BBDB1B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C64E9131AABF89A00BBDB1B /* main.m */; };
+		4C64E9171AABF89A00BBDB1B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C64E9161AABF89A00BBDB1B /* ViewController.m */; };
+		4C64E9191AABF89A00BBDB1B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C64E9181AABF89A00BBDB1B /* Images.xcassets */; };
+		4C64E91C1AABF89A00BBDB1B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C64E91A1AABF89A00BBDB1B /* Main.storyboard */; };
+		4C64E9281AABF89A00BBDB1B /* NestingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C64E9271AABF89A00BBDB1B /* NestingTests.m */; };
+		4C64E9321AAC02AA00BBDB1B /* NestingScan.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4C64E9311AAC02AA00BBDB1B /* NestingScan.mm */; };
+		4C8ED71E1AAC17F20056A251 /* CharPos.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8ED71D1AAC17F20056A251 /* CharPos.m */; };
+		4C8ED7211AAC18200056A251 /* FunctionItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8ED7201AAC18200056A251 /* FunctionItem.m */; };
+		4C8ED7261AAC18730056A251 /* ScanedData.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8ED7251AAC18730056A251 /* ScanedData.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4C64E9221AABF89A00BBDB1B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4C64E9031AABF89900BBDB1B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4C64E90A1AABF89900BBDB1B;
+			remoteInfo = Nesting;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4C64E90B1AABF89900BBDB1B /* Nesting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nesting.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C64E90F1AABF89900BBDB1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4C64E9101AABF89900BBDB1B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		4C64E9111AABF89900BBDB1B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		4C64E9131AABF89A00BBDB1B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4C64E9151AABF89A00BBDB1B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		4C64E9161AABF89A00BBDB1B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		4C64E9181AABF89A00BBDB1B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		4C64E91B1AABF89A00BBDB1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4C64E9211AABF89A00BBDB1B /* NestingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NestingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C64E9261AABF89A00BBDB1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4C64E9271AABF89A00BBDB1B /* NestingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NestingTests.m; sourceTree = "<group>"; };
+		4C64E9311AAC02AA00BBDB1B /* NestingScan.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = NestingScan.mm; sourceTree = "<group>"; };
+		4C8ED71C1AAC17F20056A251 /* CharPos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharPos.h; sourceTree = "<group>"; };
+		4C8ED71D1AAC17F20056A251 /* CharPos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CharPos.m; sourceTree = "<group>"; };
+		4C8ED71F1AAC18200056A251 /* FunctionItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FunctionItem.h; sourceTree = "<group>"; };
+		4C8ED7201AAC18200056A251 /* FunctionItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunctionItem.m; sourceTree = "<group>"; };
+		4C8ED7231AAC185E0056A251 /* NestingScan.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NestingScan.h; sourceTree = "<group>"; };
+		4C8ED7241AAC18730056A251 /* ScanedData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanedData.h; sourceTree = "<group>"; };
+		4C8ED7251AAC18730056A251 /* ScanedData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanedData.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4C64E9081AABF89900BBDB1B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C64E91E1AABF89A00BBDB1B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4C64E9021AABF89900BBDB1B = {
+			isa = PBXGroup;
+			children = (
+				4C64E90D1AABF89900BBDB1B /* Nesting */,
+				4C64E9241AABF89A00BBDB1B /* NestingTests */,
+				4C64E90C1AABF89900BBDB1B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4C64E90C1AABF89900BBDB1B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4C64E90B1AABF89900BBDB1B /* Nesting.app */,
+				4C64E9211AABF89A00BBDB1B /* NestingTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4C64E90D1AABF89900BBDB1B /* Nesting */ = {
+			isa = PBXGroup;
+			children = (
+				4C64E9101AABF89900BBDB1B /* AppDelegate.h */,
+				4C64E9111AABF89900BBDB1B /* AppDelegate.m */,
+				4C64E9151AABF89A00BBDB1B /* ViewController.h */,
+				4C64E9161AABF89A00BBDB1B /* ViewController.m */,
+				4C8ED7231AAC185E0056A251 /* NestingScan.h */,
+				4C64E9311AAC02AA00BBDB1B /* NestingScan.mm */,
+				4C8ED7241AAC18730056A251 /* ScanedData.h */,
+				4C8ED7251AAC18730056A251 /* ScanedData.m */,
+				4C8ED71C1AAC17F20056A251 /* CharPos.h */,
+				4C8ED71D1AAC17F20056A251 /* CharPos.m */,
+				4C8ED71F1AAC18200056A251 /* FunctionItem.h */,
+				4C8ED7201AAC18200056A251 /* FunctionItem.m */,
+				4C64E9181AABF89A00BBDB1B /* Images.xcassets */,
+				4C64E91A1AABF89A00BBDB1B /* Main.storyboard */,
+				4C64E90E1AABF89900BBDB1B /* Supporting Files */,
+			);
+			path = Nesting;
+			sourceTree = "<group>";
+		};
+		4C64E90E1AABF89900BBDB1B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4C64E90F1AABF89900BBDB1B /* Info.plist */,
+				4C64E9131AABF89A00BBDB1B /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4C64E9241AABF89A00BBDB1B /* NestingTests */ = {
+			isa = PBXGroup;
+			children = (
+				4C64E9271AABF89A00BBDB1B /* NestingTests.m */,
+				4C64E9251AABF89A00BBDB1B /* Supporting Files */,
+			);
+			path = NestingTests;
+			sourceTree = "<group>";
+		};
+		4C64E9251AABF89A00BBDB1B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4C64E9261AABF89A00BBDB1B /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4C64E90A1AABF89900BBDB1B /* Nesting */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4C64E92B1AABF89A00BBDB1B /* Build configuration list for PBXNativeTarget "Nesting" */;
+			buildPhases = (
+				4C64E9071AABF89900BBDB1B /* Sources */,
+				4C64E9081AABF89900BBDB1B /* Frameworks */,
+				4C64E9091AABF89900BBDB1B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Nesting;
+			productName = Nesting;
+			productReference = 4C64E90B1AABF89900BBDB1B /* Nesting.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4C64E9201AABF89A00BBDB1B /* NestingTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4C64E92E1AABF89A00BBDB1B /* Build configuration list for PBXNativeTarget "NestingTests" */;
+			buildPhases = (
+				4C64E91D1AABF89A00BBDB1B /* Sources */,
+				4C64E91E1AABF89A00BBDB1B /* Frameworks */,
+				4C64E91F1AABF89A00BBDB1B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4C64E9231AABF89A00BBDB1B /* PBXTargetDependency */,
+			);
+			name = NestingTests;
+			productName = NestingTests;
+			productReference = 4C64E9211AABF89A00BBDB1B /* NestingTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4C64E9031AABF89900BBDB1B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = liuyan;
+				TargetAttributes = {
+					4C64E90A1AABF89900BBDB1B = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					4C64E9201AABF89A00BBDB1B = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = 4C64E90A1AABF89900BBDB1B;
+					};
+				};
+			};
+			buildConfigurationList = 4C64E9061AABF89900BBDB1B /* Build configuration list for PBXProject "Nesting" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4C64E9021AABF89900BBDB1B;
+			productRefGroup = 4C64E90C1AABF89900BBDB1B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4C64E90A1AABF89900BBDB1B /* Nesting */,
+				4C64E9201AABF89A00BBDB1B /* NestingTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4C64E9091AABF89900BBDB1B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C64E9191AABF89A00BBDB1B /* Images.xcassets in Resources */,
+				4C64E91C1AABF89A00BBDB1B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C64E91F1AABF89A00BBDB1B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4C64E9071AABF89900BBDB1B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C8ED7211AAC18200056A251 /* FunctionItem.m in Sources */,
+				4C64E9321AAC02AA00BBDB1B /* NestingScan.mm in Sources */,
+				4C64E9171AABF89A00BBDB1B /* ViewController.m in Sources */,
+				4C8ED71E1AAC17F20056A251 /* CharPos.m in Sources */,
+				4C64E9141AABF89A00BBDB1B /* main.m in Sources */,
+				4C8ED7261AAC18730056A251 /* ScanedData.m in Sources */,
+				4C64E9121AABF89900BBDB1B /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C64E91D1AABF89A00BBDB1B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C64E9281AABF89A00BBDB1B /* NestingTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4C64E9231AABF89A00BBDB1B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4C64E90A1AABF89900BBDB1B /* Nesting */;
+			targetProxy = 4C64E9221AABF89A00BBDB1B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4C64E91A1AABF89A00BBDB1B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4C64E91B1AABF89A00BBDB1B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4C64E9291AABF89A00BBDB1B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		4C64E92A1AABF89A00BBDB1B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		4C64E92C1AABF89A00BBDB1B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Nesting/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		4C64E92D1AABF89A00BBDB1B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Nesting/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		4C64E92F1AABF89A00BBDB1B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = NestingTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Nesting.app/Contents/MacOS/Nesting";
+			};
+			name = Debug;
+		};
+		4C64E9301AABF89A00BBDB1B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = NestingTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Nesting.app/Contents/MacOS/Nesting";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4C64E9061AABF89900BBDB1B /* Build configuration list for PBXProject "Nesting" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C64E9291AABF89A00BBDB1B /* Debug */,
+				4C64E92A1AABF89A00BBDB1B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4C64E92B1AABF89A00BBDB1B /* Build configuration list for PBXNativeTarget "Nesting" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C64E92C1AABF89A00BBDB1B /* Debug */,
+				4C64E92D1AABF89A00BBDB1B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4C64E92E1AABF89A00BBDB1B /* Build configuration list for PBXNativeTarget "NestingTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C64E92F1AABF89A00BBDB1B /* Debug */,
+				4C64E9301AABF89A00BBDB1B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4C64E9031AABF89900BBDB1B /* Project object */;
+}
