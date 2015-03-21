@@ -17,6 +17,8 @@
 		4C8ED71E1AAC17F20056A251 /* CharPos.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8ED71D1AAC17F20056A251 /* CharPos.m */; };
 		4C8ED7211AAC18200056A251 /* FunctionItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8ED7201AAC18200056A251 /* FunctionItem.m */; };
 		4C8ED7261AAC18730056A251 /* ScanedData.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8ED7251AAC18730056A251 /* ScanedData.m */; };
+		4CC905661ABD99B700EC2D34 /* DepthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC905651ABD99B700EC2D34 /* DepthViewController.m */; };
+		4CC905691ABD99D300EC2D34 /* LinesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC905681ABD99D300EC2D34 /* LinesViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,10 @@
 		4C8ED7231AAC185E0056A251 /* NestingScan.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NestingScan.h; sourceTree = "<group>"; };
 		4C8ED7241AAC18730056A251 /* ScanedData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanedData.h; sourceTree = "<group>"; };
 		4C8ED7251AAC18730056A251 /* ScanedData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanedData.m; sourceTree = "<group>"; };
+		4CC905641ABD99B700EC2D34 /* DepthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DepthViewController.h; sourceTree = "<group>"; };
+		4CC905651ABD99B700EC2D34 /* DepthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DepthViewController.m; sourceTree = "<group>"; };
+		4CC905671ABD99D300EC2D34 /* LinesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinesViewController.h; sourceTree = "<group>"; };
+		4CC905681ABD99D300EC2D34 /* LinesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinesViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +109,10 @@
 				4C8ED71D1AAC17F20056A251 /* CharPos.m */,
 				4C8ED71F1AAC18200056A251 /* FunctionItem.h */,
 				4C8ED7201AAC18200056A251 /* FunctionItem.m */,
+				4CC905641ABD99B700EC2D34 /* DepthViewController.h */,
+				4CC905651ABD99B700EC2D34 /* DepthViewController.m */,
+				4CC905671ABD99D300EC2D34 /* LinesViewController.h */,
+				4CC905681ABD99D300EC2D34 /* LinesViewController.m */,
 				4C64E9181AABF89A00BBDB1B /* Images.xcassets */,
 				4C64E91A1AABF89A00BBDB1B /* Main.storyboard */,
 				4C64E90E1AABF89900BBDB1B /* Supporting Files */,
@@ -239,6 +249,8 @@
 				4C64E9321AAC02AA00BBDB1B /* NestingScan.mm in Sources */,
 				4C64E9171AABF89A00BBDB1B /* ViewController.m in Sources */,
 				4C8ED71E1AAC17F20056A251 /* CharPos.m in Sources */,
+				4CC905691ABD99D300EC2D34 /* LinesViewController.m in Sources */,
+				4CC905661ABD99B700EC2D34 /* DepthViewController.m in Sources */,
 				4C64E9141AABF89A00BBDB1B /* main.m in Sources */,
 				4C8ED7261AAC18730056A251 /* ScanedData.m in Sources */,
 				4C64E9121AABF89900BBDB1B /* AppDelegate.m in Sources */,

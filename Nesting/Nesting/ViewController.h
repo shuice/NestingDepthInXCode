@@ -10,6 +10,7 @@
 
 @interface ViewController : NSViewController
 @property (weak) IBOutlet NSTextField *tfPath;
+@property (weak) IBOutlet NSView *placeholderView;
 - (IBAction)onTouchUpInsideScan:(id)sender;
 @end
 

@@ -210,6 +210,7 @@ typedef void(^OnFindedItem)(NSString *fullPath, BOOL isDirectory,  BOOL *skipThi
 + (ScanedData *)scanFolder:(NSString *)path
 {
     ScanedData *scanedData = [[ScanedData alloc] init];
+    scanedData.scanPath = path;
     scanedData.eScanResult = eScanResultSuccess;
     
     BOOL isDirectory = NO;

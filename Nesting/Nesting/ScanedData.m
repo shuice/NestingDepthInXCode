@@ -8,6 +8,8 @@
 
 #import "ScanedData.h"
 
+static ScanedData *g_scanedData;
+
 @implementation ScanedData
 
 - (instancetype)init
@@ -19,4 +21,15 @@
     }
     return self;
 }
+
++ (void)setScanedData:(ScanedData *)scanedData
+{
+    g_scanedData = scanedData;
+}
+
++ (ScanedData *)getScanedData
+{
+    return g_scanedData;
+}
+
 @end
