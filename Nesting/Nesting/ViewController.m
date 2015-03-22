@@ -12,6 +12,8 @@
 #import "LinesViewController.h"
 #import "FilesViewController.h"
 
+#define USER_DEFAULT_PATH_KEY @"UserDefault_Path"
+
 typedef NS_ENUM(NSInteger, EnumScanStatus)
 {
     eScanStatusStandBy = 0,
@@ -45,6 +47,12 @@ typedef NS_ENUM(NSInteger, EnumTabIndex)
     _topBgView.layer.backgroundColor = [cr CGColor];
     _tfPath.editable = NO;
     _tfPath.selectable = NO;
+    NSString *path = [[NSUserDefaults standardUserDefaults] objectForKey:USER_DEFAULT_PATH_KEY];
+    if ([path length])
+    {
+        _tfPath.stringValue = path;
+    }
+
     
     _placeholderView.hidden = YES;
     // Do any additional setup after loading the view.
@@ -163,6 +171,7 @@ typedef NS_ENUM(NSInteger, EnumTabIndex)
                 {
                     [self showErrorMessage:@"no function founded."];
                 }
+                [[NSUserDefaults standardUserDefaults] setObject:path forKey:USER_DEFAULT_PATH_KEY];
                 [ScanedData setScanedData:nestingScan];
                 [self updateResult];
             }

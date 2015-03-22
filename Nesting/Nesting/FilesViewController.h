@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <Cocoa/Cocoa.h>
 
-@interface FilesViewController : NSViewController<NSTableViewDataSource>
+@interface FilesViewController : NSViewController<NSTableViewDataSource, NSTableViewDelegate>
 @property (weak) IBOutlet NSTableView *tableView;
 - (void)refresh;
 @end

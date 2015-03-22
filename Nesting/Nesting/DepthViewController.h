@@ -10,7 +10,7 @@
 #import <Cocoa/Cocoa.h>
 #import "ScanedData.h"
 
-@interface DepthViewController : NSViewController<NSTableViewDataSource>
+@interface DepthViewController : NSViewController<NSTableViewDataSource, NSTableViewDelegate>
 @property (weak) IBOutlet NSTableView *tableView;
 - (void)refresh;
 @end

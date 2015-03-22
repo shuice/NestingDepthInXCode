@@ -15,6 +15,7 @@
 {
     [super viewDidLoad];
     _tableView.dataSource = self;
+    _tableView.delegate = self;
     [_tableView reloadData];
 }
 
@@ -49,5 +50,10 @@
     }
     
     return str;
+}
+
+- (BOOL)tableView:(NSTableView *)tableView shouldEditTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row
+{
+    return NO;
 }
 @end
