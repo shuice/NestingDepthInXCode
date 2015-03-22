@@ -45,7 +45,7 @@
     }
     else if ([cellId isEqualToString:@"path"])
     {
-        str = functionItem.filename;
+        str = [functionItem.filename lastPathComponent];
     }
     
     return str;

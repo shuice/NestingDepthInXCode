@@ -18,6 +18,7 @@ static ScanedData *g_scanedData;
     if (self)
     {
         _functionItems = [NSMutableArray array];
+        _fileItems = [NSMutableArray array];
     }
     return self;
 }
@@ -29,7 +30,31 @@ static ScanedData *g_scanedData;
 
 + (ScanedData *)getScanedData
 {
+    if (nil == g_scanedData)
+    {
+        g_scanedData = [ScanedData getEmptyData];
+    }
     return g_scanedData;
+}
+
++ (ScanedData *)getEmptyData
+{
+    static ScanedData *scanData = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        scanData = [[ScanedData alloc] init];
+        
+        FunctionItem *functionItem = [[FunctionItem alloc] init];
+        functionItem.funName = @"no function founded.";
+        functionItem.funContentLineCount = 0;
+        functionItem.maxDepth = 0;
+        
+        scanData.scanPath = @"";
+        scanData.functionItems                      = [@[functionItem] mutableCopy];
+        scanData.depthDescOrderedFunctionItems      = [@[functionItem] mutableCopy];
+        scanData.lineCountDescOrderedFunctionItems  = [@[functionItem] mutableCopy];
+    });
+    return scanData;
 }
 
 @end

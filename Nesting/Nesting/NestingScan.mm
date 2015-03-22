@@ -8,6 +8,7 @@
 #import "NestingScan.h"
 #import "CharPos.h"
 #import "FunctionItem.h"
+#import "FileItem.h"
 
 @implementation NestingScan
 
@@ -207,8 +208,18 @@ typedef void(^OnFindedItem)(NSString *fullPath, BOOL isDirectory,  BOOL *skipThi
     return functions;
 }
 
-+ (ScanedData *)scanFolder:(NSString *)path
++ (ScanedData *)scanFolder:(NSString *)path block:(ScanProgressBlock)block
 {
+#define CHECK_STOPED if (stop) {scanedData.eScanResult = eScanResultCancel; return scanedData;}
+    if (NULL == block)
+    {
+        block = ^void(CGFloat progress, BOOL *stop){
+            
+        };
+    }
+    
+    __block BOOL stop = NO;
+    
     ScanedData *scanedData = [[ScanedData alloc] init];
     scanedData.scanPath = path;
     scanedData.eScanResult = eScanResultSuccess;
@@ -223,20 +234,44 @@ typedef void(^OnFindedItem)(NSString *fullPath, BOOL isDirectory,  BOOL *skipThi
     
     NSMutableArray *filePaths = [NSMutableArray array];
     [self scanFolder:path findedItemBlock:^(NSString *fullPath, BOOL isDirectory, BOOL *skipThis, BOOL *stopAll) {
+        block(0, &stop);
+        if (stop)
+        {
+            *stopAll = YES;
+            return;
+        }
+        
         if ([fullPath hasSuffix:@".m"] || [fullPath hasSuffix:@".mm"])
         {
             [filePaths addObject:fullPath];
         }
     }];
     
-    for (NSString *filePath in filePaths)
+    CHECK_STOPED
+    
+    NSUInteger count = [filePaths count];
+    
+    for (NSUInteger index = 0; index < count; index ++)
     {
+        block(index * 100.0 / count, &stop);
+        if (stop)
+        {
+            break;
+        }
+        
+        NSString *filePath = filePaths[index];
+        
         NSArray *lines = [self MemoryContentFromFile:filePath];
+        
+        [scanedData.fileItems addObject:[[FileItem alloc] initWithFilePath:filePath lineCount:(int32_t)[lines count]]];
+        
         NSArray *functionItems = [self ParseFunctionContentRange:filePath
                                                            lines:lines];
         [self ParseRangeToString:lines functionItems:functionItems];
         [scanedData.functionItems addObjectsFromArray:functionItems];
 	}
+    
+    CHECK_STOPED
     
     scanedData.functionItems = [self removeErrorFunctions:scanedData.functionItems];
     
@@ -244,9 +279,14 @@ typedef void(^OnFindedItem)(NSString *fullPath, BOOL isDirectory,  BOOL *skipThi
         return [obj1 compareRangeByLineCount:obj2];
     }];
     
-    scanedData.depthDescOrderedFunctionItems = [scanedData.functionItems sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+    scanedData.depthDescOrderedFunctionItems = [scanedData.functionItems sortedArrayUsingComparator:^NSComparisonResult(FunctionItem *obj1, FunctionItem *obj2) {
         return [obj1 compareRangeByDepth:obj2];
     }];
+    
+    scanedData.lineCountDescOrderedFileItems = [scanedData.fileItems sortedArrayUsingComparator:^NSComparisonResult(FileItem *obj1, FileItem *obj2) {
+        return [obj1 compareByLineCount:obj2];
+    }];
+    block(100, &stop);
 	return scanedData;
 }
 

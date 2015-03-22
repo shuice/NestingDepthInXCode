@@ -9,6 +9,10 @@
 #import <Cocoa/Cocoa.h>
 #import "ScanedData.h"
 
+// progress [0-100]
+// *stop :YES stop scan ,NO: continue scan
+typedef void(^ScanProgressBlock)(CGFloat progress, BOOL *stop);
+
 @interface NestingScan : NSObject
-+ (ScanedData *)scanFolder:(NSString *)path;
++ (ScanedData *)scanFolder:(NSString *)path block:(ScanProgressBlock)block;
 @end
