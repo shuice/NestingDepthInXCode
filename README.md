@@ -12,6 +12,5 @@
   2. Count unused png/jpg image file
 
 **Screenshots:**
- ![image](https://github.com/shuice/NestingDepthInXCode/raw/master/Screenshots/capture1.png)
+ ![image](https://github.com/shuice/NestingDepthInXCode/raw/master/Nesting/Screenshots/capture1.png)
 
- 
