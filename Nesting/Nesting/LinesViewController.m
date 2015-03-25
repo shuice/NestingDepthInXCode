@@ -16,6 +16,8 @@
     _tableView.dataSource = self;
     _tableView.delegate = self;
     [super viewDidLoad];
+    
+    [_tableView setDoubleAction:@selector(onDoubleClickTable:)];
 }
 
 - (void)refresh
@@ -53,8 +55,15 @@
 
 - (BOOL)tableView:(NSTableView *)tableView shouldEditTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row
 {
+    return NO;
+}
+
+- (void)onDoubleClickTable:(id)sender
+{
+    NSInteger rowNumber = [_tableView clickedRow];
+    
     ScanedData *scanedData = [ScanedData getScanedData];
-    FunctionItem *functionItem = scanedData.lineCountDescOrderedFunctionItems[row];
+    FunctionItem *functionItem = scanedData.lineCountDescOrderedFunctionItems[rowNumber];
     if (![[NSWorkspace sharedWorkspace] openFile:functionItem.filename]) {
         [[NSAlert alertWithMessageText:@"Error"
                          defaultButton:@"OK"
@@ -63,6 +72,5 @@
              informativeTextWithFormat:@"Can't open file:%@",functionItem.filename] runModal];
         
     }
-    return YES;
 }
 @end
