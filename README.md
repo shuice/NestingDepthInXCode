@@ -9,3 +9,9 @@
   
 **Features will done:**
   1. Support .c, cpp file
+  2. Count unused png/jpg image file
+
+**Screenshots:**
+ ![image](https://github.com/shuice/NestingDepthInXCode/raw/master/Screenshots/capture1.png)
+
+ 
