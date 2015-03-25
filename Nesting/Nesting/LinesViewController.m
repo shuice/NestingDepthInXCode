@@ -53,6 +53,16 @@
 
 - (BOOL)tableView:(NSTableView *)tableView shouldEditTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row
 {
-    return NO;
+    ScanedData *scanedData = [ScanedData getScanedData];
+    FunctionItem *functionItem = scanedData.lineCountDescOrderedFunctionItems[row];
+    if (![[NSWorkspace sharedWorkspace] openFile:functionItem.filename]) {
+        [[NSAlert alertWithMessageText:@"Error"
+                         defaultButton:@"OK"
+                       alternateButton:nil
+                           otherButton:nil
+             informativeTextWithFormat:@"Can't open file:%@",functionItem.filename] runModal];
+        
+    }
+    return YES;
 }
 @end
