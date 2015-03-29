@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14A389" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14A261i" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6254"/>
@@ -99,6 +99,10 @@
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UYq-av-ynF">
                                 <rect key="frame" x="0.0" y="525" width="800" height="75"/>
                                 <subviews>
+                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ucE-Tq-rZZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="800" height="75"/>
+                                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="axesIndependently" image="top_bg" id="GKf-FM-kEI"/>
+                                    </imageView>
                                     <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gaF-sp-ob1">
                                         <rect key="frame" x="20" y="41" width="623" height="22"/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="Select source directory to scan" drawsBackground="YES" id="1b7-SS-5nn">
@@ -135,19 +139,9 @@
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wdx-43-vnG">
                                 <rect key="frame" x="90" y="0.0" width="710" height="525"/>
                             </customView>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qMC-V5-4Oe">
-                                <rect key="frame" x="0.0" y="435" width="90" height="90"/>
-                                <buttonCell key="cell" type="squareTextured" title="Depth" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ipJ-NN-1ib">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="onTouchUpInsideDepth:" target="XfG-lQ-9wD" id="8j8-9u-bJc"/>
-                                </connections>
-                            </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b6g-Bk-4Ls">
                                 <rect key="frame" x="0.0" y="345" width="90" height="90"/>
-                                <buttonCell key="cell" type="squareTextured" title="Lines" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="uOa-Bl-2v3">
+                                <buttonCell key="cell" type="squareTextured" bezelStyle="texturedSquare" image="btn_lines" imagePosition="overlaps" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="uOa-Bl-2v3">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
@@ -157,12 +151,22 @@
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0bI-rh-5GW">
                                 <rect key="frame" x="0.0" y="255" width="90" height="90"/>
-                                <buttonCell key="cell" type="squareTextured" title="Files" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="8Ti-lc-Gne">
+                                <buttonCell key="cell" type="squareTextured" bezelStyle="texturedSquare" image="btn_files" imagePosition="overlaps" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="8Ti-lc-Gne">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <connections>
                                     <action selector="onTouchUpInsideFiles:" target="XfG-lQ-9wD" id="mur-XD-q9M"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qMC-V5-4Oe">
+                                <rect key="frame" x="0.0" y="435" width="90" height="90"/>
+                                <buttonCell key="cell" type="squareTextured" bezelStyle="texturedSquare" image="btn_depth" imagePosition="overlaps" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="ipJ-NN-1ib">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="onTouchUpInsideDepth:" target="XfG-lQ-9wD" id="8j8-9u-bJc"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -192,12 +196,12 @@
                         <subviews>
                             <scrollView autoresizesSubviews="NO" autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ccp-Rh-hvK">
                                 <rect key="frame" x="0.0" y="0.0" width="710" height="300"/>
-                                <clipView key="contentView" misplaced="YES" id="GMK-6O-XJB">
+                                <clipView key="contentView" id="GMK-6O-XJB">
                                     <rect key="frame" x="1" y="0.0" width="238" height="134"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <tableView focusRingType="none" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" typeSelect="NO" headerView="1qy-ov-eUd" id="ovi-ZN-b7Q">
-                                            <rect key="frame" x="0.0" y="0.0" width="461" height="19"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="708" height="19"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <size key="intercellSpacing" width="3" height="2"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -286,12 +290,12 @@
                         <subviews>
                             <scrollView autoresizesSubviews="NO" autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VlW-Ij-e4z">
                                 <rect key="frame" x="0.0" y="0.0" width="710" height="300"/>
-                                <clipView key="contentView" misplaced="YES" id="yFx-g1-rQV">
+                                <clipView key="contentView" id="yFx-g1-rQV">
                                     <rect key="frame" x="1" y="0.0" width="238" height="134"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <tableView focusRingType="none" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" headerView="mBw-g7-qSJ" id="4UU-c5-4ML">
-                                            <rect key="frame" x="0.0" y="0.0" width="448" height="19"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="708" height="19"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <size key="intercellSpacing" width="3" height="2"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -385,7 +389,7 @@
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <tableView focusRingType="none" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" headerView="gng-zF-ZYW" id="8Jn-Wh-IWZ">
-                                            <rect key="frame" x="0.0" y="0.0" width="448" height="19"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="708" height="19"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <size key="intercellSpacing" width="3" height="2"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -452,4 +456,10 @@
             <point key="canvasLocation" x="-11" y="1780"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="btn_depth" width="90" height="90"/>
+        <image name="btn_files" width="90" height="90"/>
+        <image name="btn_lines" width="90" height="90"/>
+        <image name="top_bg" width="34" height="68"/>
+    </resources>
 </document>

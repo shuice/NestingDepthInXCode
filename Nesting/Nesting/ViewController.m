@@ -34,6 +34,7 @@ typedef NS_ENUM(NSInteger, EnumTabIndex)
 @property FilesViewController *filesVC;
 @property (nonatomic) EnumScanStatus eScanStatus;
 @property EnumTabIndex eTabIndex;
+
 @end
 
 @implementation ViewController
@@ -75,6 +76,7 @@ typedef NS_ENUM(NSInteger, EnumTabIndex)
     [self onTouchUpInsideDepth:nil];
 }
 
+
 - (IBAction)onTouchUpInsideDepth:(id)sender
 {
     _eTabIndex = eTabIndexDepth;
@@ -95,8 +97,12 @@ typedef NS_ENUM(NSInteger, EnumTabIndex)
 
 - (void)updateTab
 {
+    NSArray *normalImages = @[@"btn_depth", @"btn_lines", @"btn_files"];
+    NSArray *hilightedImages = @[@"btn_depth_h", @"btn_lines_h", @"btn_files_h"];
+    
     [@[_btnDepth, _btnLinesInFunction, _btnFiles] enumerateObjectsUsingBlock:^(NSButton *obj, NSUInteger idx, BOOL *stop) {
-        [obj setHighlighted:(idx == _eTabIndex)];
+        NSArray *images = (idx == _eTabIndex) ? hilightedImages : normalImages;
+        [obj setImage:[NSImage imageNamed:images[idx]]];
     }];
     
     [@[_depthVC.view, _linesVC.view, _filesVC.view] enumerateObjectsUsingBlock:^(NSView *obj, NSUInteger idx, BOOL *stop) {
