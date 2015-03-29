@@ -140,7 +140,7 @@
                                 <rect key="frame" x="90" y="0.0" width="710" height="525"/>
                             </customView>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b6g-Bk-4Ls">
-                                <rect key="frame" x="0.0" y="345" width="90" height="90"/>
+                                <rect key="frame" x="0.0" y="346" width="90" height="90"/>
                                 <buttonCell key="cell" type="squareTextured" bezelStyle="texturedSquare" image="btn_lines" imagePosition="overlaps" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="uOa-Bl-2v3">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -150,7 +150,7 @@
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0bI-rh-5GW">
-                                <rect key="frame" x="0.0" y="255" width="90" height="90"/>
+                                <rect key="frame" x="0.0" y="257" width="90" height="90"/>
                                 <buttonCell key="cell" type="squareTextured" bezelStyle="texturedSquare" image="btn_files" imagePosition="overlaps" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="8Ti-lc-Gne">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
