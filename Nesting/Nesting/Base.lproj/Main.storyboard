@@ -141,8 +141,8 @@
                             </customView>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b6g-Bk-4Ls">
                                 <rect key="frame" x="0.0" y="346" width="90" height="90"/>
-                                <buttonCell key="cell" type="squareTextured" bezelStyle="texturedSquare" image="btn_lines" imagePosition="overlaps" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="uOa-Bl-2v3">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <buttonCell key="cell" type="squareTextured" bezelStyle="texturedSquare" image="btn_lines" imagePosition="above" alignment="center" alternateImage="btn_lines_h" state="on" imageScaling="proportionallyDown" inset="2" id="uOa-Bl-2v3">
+                                    <behavior key="behavior" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <connections>
@@ -150,9 +150,9 @@
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0bI-rh-5GW">
-                                <rect key="frame" x="0.0" y="257" width="90" height="90"/>
-                                <buttonCell key="cell" type="squareTextured" bezelStyle="texturedSquare" image="btn_files" imagePosition="overlaps" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="8Ti-lc-Gne">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <rect key="frame" x="0.0" y="256" width="90" height="90"/>
+                                <buttonCell key="cell" type="squareTextured" bezelStyle="texturedSquare" image="btn_files" imagePosition="above" alignment="center" alternateImage="btn_files_h" state="on" imageScaling="proportionallyDown" inset="2" id="8Ti-lc-Gne">
+                                    <behavior key="behavior" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <connections>
@@ -160,9 +160,9 @@
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qMC-V5-4Oe">
-                                <rect key="frame" x="0.0" y="435" width="90" height="90"/>
-                                <buttonCell key="cell" type="squareTextured" bezelStyle="texturedSquare" image="btn_depth" imagePosition="overlaps" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="ipJ-NN-1ib">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
+                                <rect key="frame" x="0.0" y="436" width="90" height="90"/>
+                                <buttonCell key="cell" type="squareTextured" bezelStyle="texturedSquare" image="btn_depth" imagePosition="above" alignment="center" alternateImage="btn_depth_h" state="on" imageScaling="proportionallyDown" inset="2" id="ipJ-NN-1ib">
+                                    <behavior key="behavior" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <connections>
@@ -458,8 +458,11 @@
     </scenes>
     <resources>
         <image name="btn_depth" width="90" height="90"/>
+        <image name="btn_depth_h" width="90" height="90"/>
         <image name="btn_files" width="90" height="90"/>
+        <image name="btn_files_h" width="90" height="90"/>
         <image name="btn_lines" width="90" height="90"/>
+        <image name="btn_lines_h" width="90" height="90"/>
         <image name="top_bg" width="34" height="68"/>
     </resources>
 </document>
