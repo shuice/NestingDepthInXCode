@@ -48,11 +48,13 @@ typedef NS_ENUM(NSInteger, EnumTabIndex)
     _topBgView.layer.backgroundColor = [cr CGColor];
     _tfPath.editable = NO;
     _tfPath.selectable = NO;
+#if 0
     NSString *path = [[NSUserDefaults standardUserDefaults] objectForKey:USER_DEFAULT_PATH_KEY];
     if ([path length])
     {
         _tfPath.stringValue = path;
     }
+#endif
 
     
     _placeholderView.hidden = YES;

@@ -75,6 +75,7 @@
 		4CC905651ABD99B700EC2D34 /* DepthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DepthViewController.m; sourceTree = "<group>"; };
 		4CC905671ABD99D300EC2D34 /* LinesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinesViewController.h; sourceTree = "<group>"; };
 		4CC905681ABD99D300EC2D34 /* LinesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinesViewController.m; sourceTree = "<group>"; };
+		805D78C41ACED83D00C304FC /* Nesting.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Nesting.entitlements; sourceTree = "<group>"; };
 		80B3FBE91AC8090100496F8F /* btn_depth.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_depth.png; sourceTree = "<group>"; };
 		80B3FBEA1AC8090100496F8F /* btn_depth@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_depth@2x.png"; sourceTree = "<group>"; };
 		80B3FBEB1AC8090100496F8F /* btn_depth_h.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_depth_h.png; sourceTree = "<group>"; };
@@ -129,6 +130,7 @@
 		4C64E90D1AABF89900BBDB1B /* Nesting */ = {
 			isa = PBXGroup;
 			children = (
+				805D78C41ACED83D00C304FC /* Nesting.entitlements */,
 				4C64E9101AABF89900BBDB1B /* AppDelegate.h */,
 				4C64E9111AABF89900BBDB1B /* AppDelegate.m */,
 				4C64E9151AABF89A00BBDB1B /* ViewController.h */,
@@ -252,6 +254,11 @@
 				TargetAttributes = {
 					4C64E90A1AABF89900BBDB1B = {
 						CreatedOnToolsVersion = 6.1.1;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
 					};
 					4C64E9201AABF89A00BBDB1B = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -439,6 +446,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Nesting/Nesting.entitlements;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = Nesting/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
@@ -451,6 +459,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Nesting/Nesting.entitlements;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = Nesting/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
