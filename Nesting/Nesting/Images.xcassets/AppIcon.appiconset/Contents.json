@@ -3,49 +3,49 @@
     {
       "size" : "16x16",
       "idiom" : "mac",
-      "filename" : "AppIco_16.png",
+      "filename" : "Total16.png",
       "scale" : "1x"
     },
     {
       "size" : "16x16",
       "idiom" : "mac",
-      "filename" : "AppIco_32.png",
+      "filename" : "Total32.png",
       "scale" : "2x"
     },
     {
       "size" : "32x32",
       "idiom" : "mac",
-      "filename" : "AppIco_32-1.png",
+      "filename" : "Total32-1.png",
       "scale" : "1x"
     },
     {
       "size" : "32x32",
       "idiom" : "mac",
-      "filename" : "AppIco_64.png",
+      "filename" : "Total64.png",
       "scale" : "2x"
     },
     {
       "size" : "128x128",
       "idiom" : "mac",
-      "filename" : "AppIco_64-1.png",
+      "filename" : "Total128.png",
       "scale" : "1x"
     },
     {
       "size" : "128x128",
       "idiom" : "mac",
-      "filename" : "AppIco_256.png",
+      "filename" : "Total256.png",
       "scale" : "2x"
     },
     {
       "size" : "256x256",
       "idiom" : "mac",
-      "filename" : "AppIco_256-1.png",
+      "filename" : "Total256-1.png",
       "scale" : "1x"
     },
     {
       "size" : "256x256",
       "idiom" : "mac",
-      "filename" : "AppIco_512.png",
+      "filename" : "Total512.png",
       "scale" : "2x"
     },
     {
