@@ -11,6 +11,7 @@
 #import "DepthViewController.h"
 #import "LinesViewController.h"
 #import "FilesViewController.h"
+#import "DuplicatedCodeViewController.h"
 
 #define USER_DEFAULT_PATH_KEY @"UserDefault_Path"
 
@@ -32,6 +33,7 @@ typedef NS_ENUM(NSInteger, EnumTabIndex)
 @property DepthViewController *depthVC;
 @property LinesViewController *linesVC;
 @property FilesViewController *filesVC;
+@property DuplicatedCodeViewController *duplicatedVC;
 @property (nonatomic) EnumScanStatus eScanStatus;
 @property EnumTabIndex eTabIndex;
 
@@ -73,6 +75,10 @@ typedef NS_ENUM(NSInteger, EnumTabIndex)
     _filesVC.view.frame = _placeholderView.frame;
     [self.view addSubview:_filesVC.view];
     
+    self.duplicatedVC = [storyboard instantiateControllerWithIdentifier:@"Codes"];
+    _duplicatedVC.view.frame = _placeholderView.frame;
+    [self.view addSubview:_duplicatedVC.view];
+    
     [self updateResult];
     
     [self onTouchUpInsideDepth:nil];
@@ -99,15 +105,15 @@ typedef NS_ENUM(NSInteger, EnumTabIndex)
 
 - (void)updateTab
 {
-    NSArray *normalImages = @[@"btn_depth", @"btn_lines", @"btn_files"];
-    NSArray *hilightedImages = @[@"btn_depth_h", @"btn_lines_h", @"btn_files_h"];
+    NSArray *normalImages = @[@"btn_depth", @"btn_lines", @"btn_files", @"btn_files"];
+    NSArray *hilightedImages = @[@"btn_depth_h", @"btn_lines_h", @"btn_files_h", @"btn_files_h"];
     
-    [@[_btnDepth, _btnLinesInFunction, _btnFiles] enumerateObjectsUsingBlock:^(NSButton *obj, NSUInteger idx, BOOL *stop) {
+    [@[_btnDepth, _btnLinesInFunction, _btnFiles, _btnCode] enumerateObjectsUsingBlock:^(NSButton *obj, NSUInteger idx, BOOL *stop) {
         NSArray *images = (idx == _eTabIndex) ? hilightedImages : normalImages;
         [obj setImage:[NSImage imageNamed:images[idx]]];
     }];
     
-    [@[_depthVC.view, _linesVC.view, _filesVC.view] enumerateObjectsUsingBlock:^(NSView *obj, NSUInteger idx, BOOL *stop) {
+    [@[_depthVC.view, _linesVC.view, _filesVC.view, _duplicatedVC] enumerateObjectsUsingBlock:^(NSView *obj, NSUInteger idx, BOOL *stop) {
         [obj setHidden:(idx != _eTabIndex)];
     }];
 }
@@ -213,6 +219,7 @@ typedef NS_ENUM(NSInteger, EnumTabIndex)
     [_linesVC refresh];
     [_depthVC refresh];
     [_filesVC refresh];
+//    [_duplicatedVC refresh];
 }
 
 - (void)showErrorMessage:(NSString *)msg
@@ -222,5 +229,7 @@ typedef NS_ENUM(NSInteger, EnumTabIndex)
                    alternateButton:nil
                        otherButton:nil
          informativeTextWithFormat:@"%@", msg] runModal];
+}
+- (IBAction)onTouchUpInsideCode:(id)sender {
 }
 @end

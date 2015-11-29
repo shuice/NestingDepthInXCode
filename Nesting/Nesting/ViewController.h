@@ -16,6 +16,8 @@
 @property (weak) IBOutlet NSButton *btnLinesInFunction;
 @property (weak) IBOutlet NSButton *btnDepth;
 @property (weak) IBOutlet NSView *topBgView;
+@property (weak) IBOutlet NSButton *btnCode;
+- (IBAction)onTouchUpInsideCode:(id)sender;
 @property (weak) IBOutlet NSProgressIndicator *process;
 - (IBAction)onTouchUpInsideScan:(id)sender;
 @end
