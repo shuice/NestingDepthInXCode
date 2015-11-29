@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "FunctionItem.h"
+#import "ScropeManager.h"
 
 typedef NS_ENUM(NSInteger, EnumScanResult)
 {
@@ -24,6 +25,7 @@ typedef NS_ENUM(NSInteger, EnumScanResult)
 @property (strong) NSArray *depthDescOrderedFunctionItems;
 @property (strong) NSArray *lineCountDescOrderedFunctionItems;
 @property (strong) NSArray *lineCountDescOrderedFileItems;
+@property (strong) NSArray<ScropeItem *> *scropeItems;
 
 
 + (void)setScanedData:(ScanedData *)scanedData;

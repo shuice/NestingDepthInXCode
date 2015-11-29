@@ -48,7 +48,7 @@ typedef NS_ENUM(NSInteger, EnumTabIndex)
     _topBgView.layer.backgroundColor = [cr CGColor];
     _tfPath.editable = NO;
     _tfPath.selectable = NO;
-#if 0
+#if 1
     NSString *path = [[NSUserDefaults standardUserDefaults] objectForKey:USER_DEFAULT_PATH_KEY];
     if ([path length])
     {

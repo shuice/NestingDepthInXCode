@@ -13,3 +13,10 @@ struct CharPos
     int32_t lineIndex;
     int32_t colIndex;
 };
+
+
+@interface CharRange : NSObject
+@property NSString *filePath;
+@property struct CharPos startPos;
+@property struct CharPos endPos;
+@end

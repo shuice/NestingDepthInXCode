@@ -19,6 +19,7 @@ static ScanedData *g_scanedData;
     {
         _functionItems = [NSMutableArray array];
         _fileItems = [NSMutableArray array];
+        _scropeItems = [NSMutableArray array];
     }
     return self;
 }

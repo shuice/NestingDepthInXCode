@@ -7,3 +7,8 @@
 //
 
 #import "CharPos.h"
+
+
+@implementation CharRange
+
+@end

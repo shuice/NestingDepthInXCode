@@ -34,6 +34,8 @@
 		80B3FC001AC8090100496F8F /* btn_lines_h.png in Resources */ = {isa = PBXBuildFile; fileRef = 80B3FBF31AC8090100496F8F /* btn_lines_h.png */; };
 		80B3FC011AC8090100496F8F /* btn_lines_h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 80B3FBF41AC8090100496F8F /* btn_lines_h@2x.png */; };
 		80B3FC021AC8090100496F8F /* top_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 80B3FBF51AC8090100496F8F /* top_bg.png */; };
+		C36EC8221C09FBCA006263E1 /* ScropeItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C36EC81F1C09FBCA006263E1 /* ScropeItem.m */; };
+		C36EC8231C09FBCA006263E1 /* ScropeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C36EC8211C09FBCA006263E1 /* ScropeManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +91,10 @@
 		80B3FBF31AC8090100496F8F /* btn_lines_h.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_lines_h.png; sourceTree = "<group>"; };
 		80B3FBF41AC8090100496F8F /* btn_lines_h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_lines_h@2x.png"; sourceTree = "<group>"; };
 		80B3FBF51AC8090100496F8F /* top_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = top_bg.png; sourceTree = "<group>"; };
+		C36EC81E1C09FBCA006263E1 /* ScropeItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScropeItem.h; sourceTree = "<group>"; };
+		C36EC81F1C09FBCA006263E1 /* ScropeItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScropeItem.m; sourceTree = "<group>"; };
+		C36EC8201C09FBCA006263E1 /* ScropeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScropeManager.h; sourceTree = "<group>"; };
+		C36EC8211C09FBCA006263E1 /* ScropeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScropeManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +157,10 @@
 				4CC905681ABD99D300EC2D34 /* LinesViewController.m */,
 				4CB5404C1ABEC8B50083FC51 /* FilesViewController.h */,
 				4CB5404D1ABEC8B50083FC51 /* FilesViewController.m */,
+				C36EC81E1C09FBCA006263E1 /* ScropeItem.h */,
+				C36EC81F1C09FBCA006263E1 /* ScropeItem.m */,
+				C36EC8201C09FBCA006263E1 /* ScropeManager.h */,
+				C36EC8211C09FBCA006263E1 /* ScropeManager.m */,
 				4C64E9181AABF89A00BBDB1B /* Images.xcassets */,
 				4C64E91A1AABF89A00BBDB1B /* Main.storyboard */,
 				80B3FBE81AC8090100496F8F /* Image */,
@@ -325,6 +335,8 @@
 			files = (
 				4C8ED7211AAC18200056A251 /* FunctionItem.m in Sources */,
 				4C64E9321AAC02AA00BBDB1B /* NestingScan.mm in Sources */,
+				C36EC8231C09FBCA006263E1 /* ScropeManager.m in Sources */,
+				C36EC8221C09FBCA006263E1 /* ScropeItem.m in Sources */,
 				4C64E9171AABF89A00BBDB1B /* ViewController.m in Sources */,
 				4C8ED71E1AAC17F20056A251 /* CharPos.m in Sources */,
 				4CC905691ABD99D300EC2D34 /* LinesViewController.m in Sources */,

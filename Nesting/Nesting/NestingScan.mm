@@ -9,6 +9,10 @@
 #import "CharPos.h"
 #import "FunctionItem.h"
 #import "FileItem.h"
+#import <stack>
+#import "ScropeManager.h"
+
+using namespace std;
 
 @implementation NestingScan
 
@@ -23,12 +27,20 @@
     return [string componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
 }
 
-+ (BOOL)ParseChar:(const unichar&)c
-          charPos:(const CharPos&)charPos
-         curDepth:(int&)curDepth
-         maxDepth:(int&)maxDepth
-     functionItem:(FunctionItem *)functionItem
+typedef void(^OnScropeFindedAtPos)(const CharPos& startPos, const CharPos& endPos);
++ (BOOL)        ParseChar:(const unichar&)c
+                  charPos:(const CharPos&)charPos
+                 curDepth:(int&)curDepth
+                 maxDepth:(int&)maxDepth
+             functionItem:(FunctionItem *)functionItem
+           scropePosStack:(stack<CharPos>&)scropePosStack
+      onScropeFindedBlock:(OnScropeFindedAtPos)onScropeFindedBlock
 {
+    if (NULL == onScropeFindedBlock)
+    {
+        onScropeFindedBlock = ^(const CharPos& startPos, const CharPos& endPos){};
+    }
+    
 	const char leftFlag = '{';
 	const char rightFlag = '}';
 	const char funNamePos1 = '-';
@@ -40,6 +52,7 @@
         {
             maxDepth = curDepth;
         }
+        scropePosStack.push(charPos);
 		if (1 == curDepth)
 		{
 			// find a new function name
@@ -49,6 +62,13 @@
 	else if (c == rightFlag)
 	{
 		curDepth --;
+//        NSAssert(scropePosStack.size() > 0, @"size empty");
+        if (scropePosStack.size() > 0)
+        {
+            const CharPos startPos = scropePosStack.top();
+            scropePosStack.pop();
+            onScropeFindedBlock(startPos, charPos);
+        }
 		if (0 == curDepth)
 		{
 			// end of function
@@ -68,10 +88,13 @@
 	return false;
 }
 
-+ (NSArray *) ParseFunctionContentRange:(NSString *)fileName lines:(NSArray *)lines
++ (NSArray *) ParseFunctionContentRange:(NSString *)fileName
+                                  lines:(NSArray *)lines
+                    onScropeFindedBlock:(OnScropeFindedAtPos)onScropeFindedBlock
 {
     NSMutableArray *functionItems = [NSMutableArray array];
-	
+    stack<CharPos> scropePosStack;
+    
 	int depth = 0;
     FunctionItem *functionItem = [[FunctionItem alloc] init];
 	functionItem.filename = fileName;
@@ -89,7 +112,9 @@
                         charPos:charPos
                        curDepth:depth
                        maxDepth:maxDepth
-                   functionItem:functionItem])
+                   functionItem:functionItem
+                 scropePosStack:scropePosStack
+            onScropeFindedBlock:onScropeFindedBlock])
 			{
                 [functionItems addObject:[functionItem clone]];
 			}
@@ -224,6 +249,8 @@ typedef void(^OnFindedItem)(NSString *fullPath, BOOL isDirectory,  BOOL *skipThi
     scanedData.scanPath = path;
     scanedData.eScanResult = eScanResultSuccess;
     
+    ScropeManager *scropeManager = [ScropeManager new];
+    
     BOOL isDirectory = NO;
     if ((NO == [[NSFileManager defaultManager] fileExistsAtPath:path isDirectory:&isDirectory])
         || (NO == isDirectory))
@@ -266,7 +293,17 @@ typedef void(^OnFindedItem)(NSString *fullPath, BOOL isDirectory,  BOOL *skipThi
         [scanedData.fileItems addObject:[[FileItem alloc] initWithFilePath:filePath lineCount:(int32_t)[lines count]]];
         
         NSArray *functionItems = [self ParseFunctionContentRange:filePath
-                                                           lines:lines];
+                                                           lines:lines
+                                             onScropeFindedBlock:^(const CharPos &startPos, const CharPos &endPos) {
+                                                 CharRange *charRange = [CharRange new];
+                                                 charRange.filePath = filePath;
+                                                 charRange.startPos = startPos;
+                                                 charRange.endPos = endPos;
+                                                 NSString *innerText = [self ContentByRange:lines
+                                                                                charPosFrom:startPos
+                                                                                  charPosTo:endPos];
+                                                 [scropeManager addScrope:innerText charRange:charRange];
+                                             }];
         [self ParseRangeToString:lines functionItems:functionItems];
         [scanedData.functionItems addObjectsFromArray:functionItems];
 	}
@@ -286,6 +323,8 @@ typedef void(^OnFindedItem)(NSString *fullPath, BOOL isDirectory,  BOOL *skipThi
     scanedData.lineCountDescOrderedFileItems = [scanedData.fileItems sortedArrayUsingComparator:^NSComparisonResult(FileItem *obj1, FileItem *obj2) {
         return [obj1 compareByLineCount:obj2];
     }];
+    
+    scanedData.scropeItems = [scropeManager removeUnDuplicatedAndSort];
     block(100, &stop);
 	return scanedData;
 }
