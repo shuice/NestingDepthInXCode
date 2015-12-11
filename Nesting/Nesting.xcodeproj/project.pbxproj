@@ -36,6 +36,7 @@
 		80B3FC021AC8090100496F8F /* top_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 80B3FBF51AC8090100496F8F /* top_bg.png */; };
 		C36EC8221C09FBCA006263E1 /* ScropeItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C36EC81F1C09FBCA006263E1 /* ScropeItem.m */; };
 		C36EC8231C09FBCA006263E1 /* ScropeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C36EC8211C09FBCA006263E1 /* ScropeManager.m */; };
+		C3943BD11C0C93C600EE9AE7 /* DuplicatedCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3943BD01C0C93C600EE9AE7 /* DuplicatedCodeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +96,8 @@
 		C36EC81F1C09FBCA006263E1 /* ScropeItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScropeItem.m; sourceTree = "<group>"; };
 		C36EC8201C09FBCA006263E1 /* ScropeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScropeManager.h; sourceTree = "<group>"; };
 		C36EC8211C09FBCA006263E1 /* ScropeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScropeManager.m; sourceTree = "<group>"; };
+		C3943BCF1C0C93C600EE9AE7 /* DuplicatedCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DuplicatedCodeViewController.h; sourceTree = "<group>"; };
+		C3943BD01C0C93C600EE9AE7 /* DuplicatedCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DuplicatedCodeViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +139,8 @@
 		4C64E90D1AABF89900BBDB1B /* Nesting */ = {
 			isa = PBXGroup;
 			children = (
+				C3943BCF1C0C93C600EE9AE7 /* DuplicatedCodeViewController.h */,
+				C3943BD01C0C93C600EE9AE7 /* DuplicatedCodeViewController.m */,
 				805D78C41ACED83D00C304FC /* Nesting.entitlements */,
 				4C64E9101AABF89900BBDB1B /* AppDelegate.h */,
 				4C64E9111AABF89900BBDB1B /* AppDelegate.m */,
@@ -341,6 +346,7 @@
 				4C8ED71E1AAC17F20056A251 /* CharPos.m in Sources */,
 				4CC905691ABD99D300EC2D34 /* LinesViewController.m in Sources */,
 				4CB540511ABECB0A0083FC51 /* FileItem.m in Sources */,
+				C3943BD11C0C93C600EE9AE7 /* DuplicatedCodeViewController.m in Sources */,
 				4CC905661ABD99B700EC2D34 /* DepthViewController.m in Sources */,
 				4C64E9141AABF89A00BBDB1B /* main.m in Sources */,
 				4C8ED7261AAC18730056A251 /* ScanedData.m in Sources */,
@@ -459,14 +465,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Nesting/Nesting.entitlements;
-				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer: xiaoyi liao (6LE74EFRJS)";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = Nesting/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "1df3a4b7-ff27-491b-8aa3-bced4fc3638a";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -474,14 +480,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Nesting/Nesting.entitlements;
-				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer: xiaoyi liao (6LE74EFRJS)";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = Nesting/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "1df3a4b7-ff27-491b-8aa3-bced4fc3638a";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

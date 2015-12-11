@@ -27,6 +27,7 @@ typedef NS_ENUM(NSInteger, EnumTabIndex)
     eTabIndexDepth = 0,
     eTabIndexLineOfFunction,
     eTabIndexLineOfFile,
+    eTabIndexDuplicatedCode,
 };
 
 @interface ViewController()
@@ -113,7 +114,7 @@ typedef NS_ENUM(NSInteger, EnumTabIndex)
         [obj setImage:[NSImage imageNamed:images[idx]]];
     }];
     
-    [@[_depthVC.view, _linesVC.view, _filesVC.view, _duplicatedVC] enumerateObjectsUsingBlock:^(NSView *obj, NSUInteger idx, BOOL *stop) {
+    [@[_depthVC.view, _linesVC.view, _filesVC.view, _duplicatedVC.view] enumerateObjectsUsingBlock:^(NSView *obj, NSUInteger idx, BOOL *stop) {
         [obj setHidden:(idx != _eTabIndex)];
     }];
 }
@@ -230,6 +231,10 @@ typedef NS_ENUM(NSInteger, EnumTabIndex)
                        otherButton:nil
          informativeTextWithFormat:@"%@", msg] runModal];
 }
-- (IBAction)onTouchUpInsideCode:(id)sender {
+- (IBAction)onTouchUpInsideCode:(id)sender
+{
+    _eTabIndex = eTabIndexDuplicatedCode;
+    [self updateTab];
+
 }
 @end
