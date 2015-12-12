@@ -220,7 +220,7 @@ typedef NS_ENUM(NSInteger, EnumTabIndex)
     [_linesVC refresh];
     [_depthVC refresh];
     [_filesVC refresh];
-//    [_duplicatedVC refresh];
+    [_duplicatedVC refresh];
 }
 
 - (void)showErrorMessage:(NSString *)msg

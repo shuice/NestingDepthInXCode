@@ -10,8 +10,8 @@
 #import <Cocoa/Cocoa.h>
 
 @interface DuplicatedCodeViewController : NSViewController<NSTableViewDataSource, NSTableViewDelegate>
-//@property (weak) IBOutlet NSTableView *tableView;
-//@property (unsafe_unretained) IBOutlet NSTextView *code;
+@property (weak) IBOutlet NSTableView *tableView;
+@property (unsafe_unretained) IBOutlet NSTextView *code;
 
-//- (void)refresh;
+- (void)refresh;
 @end
