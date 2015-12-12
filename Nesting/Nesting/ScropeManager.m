@@ -23,7 +23,7 @@
     return self;
 }
 
--(void)addScrope:(NSString *)innerText charRange:(CharRange *)charRange
+-(void)addScrope:(NSString *)innerText charRange:(CharRange *)charRange fileName:(NSString *)fileName
 {
     if ([innerText length] == 0)
     {
@@ -49,6 +49,7 @@
         scropeItem.wordCount = wordCount;
         self.md5_2_ScroptItem[checksum] = scropeItem;
     }
+    [scropeItem.fileNames addObject:fileName ?: @""];
     [scropeItem.charRanges addObject:charRange];
 }
 

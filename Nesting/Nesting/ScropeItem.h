@@ -16,6 +16,7 @@
 @property NSUInteger score;
 @property NSUInteger wordCount;
 @property NSMutableArray<CharRange *> *charRanges;
+@property NSMutableArray<NSString *> *fileNames;
 
 - (void)calcScore;
 - (NSComparisonResult)compare:(ScropeItem *)scoreItem;

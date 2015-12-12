@@ -65,7 +65,8 @@
         return;
     }
     ScropeItem *scropeItem = scanedData.scropeItems[row];
-    _code.string = scropeItem.innerText;
+    NSString *fileNames = [scropeItem.fileNames componentsJoinedByString:@"\n"];
+    _code.string = [NSString stringWithFormat:@"Files:\n%@\n\nCode:\n%@\n}", fileNames, scropeItem.innerText];
 }
 
 @end

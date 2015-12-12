@@ -18,6 +18,7 @@
     if (self)
     {
         _charRanges = [NSMutableArray array];
+        _fileNames = [NSMutableArray array];
     }
     return self;
 }

@@ -10,7 +10,7 @@
 #import "ScropeItem.h"
 
 @interface ScropeManager : NSObject
--(void)addScrope:(NSString *)innerText charRange:(CharRange *)charRange;
+-(void)addScrope:(NSString *)innerText charRange:(CharRange *)charRange fileName:(NSString *)fileName;
 @property NSMutableDictionary<NSString *, ScropeItem *> *md5_2_ScroptItem;
 - (NSArray<ScropeItem *> *)removeUnDuplicatedAndSort;
 @end

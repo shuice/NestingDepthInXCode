@@ -302,7 +302,9 @@ typedef void(^OnFindedItem)(NSString *fullPath, BOOL isDirectory,  BOOL *skipThi
                                                  NSString *innerText = [self ContentByRange:lines
                                                                                 charPosFrom:startPos
                                                                                   charPosTo:endPos];
-                                                 [scropeManager addScrope:innerText charRange:charRange];
+                                                 [scropeManager addScrope:innerText
+                                                                charRange:charRange
+                                                                 fileName:[filePath lastPathComponent]];
                                              }];
         [self ParseRangeToString:lines functionItems:functionItems];
         [scanedData.functionItems addObjectsFromArray:functionItems];
